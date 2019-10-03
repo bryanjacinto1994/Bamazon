@@ -10,6 +10,7 @@ CREATE TABLE products(
     item_name VARCHAR(30) NULL,
     department_name VARCHAR(30) NULL,
     price INT NULL,
-    
+    stock_quantity INT(100) NULL,
+
 
 )
