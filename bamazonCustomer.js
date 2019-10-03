@@ -31,6 +31,15 @@ function viewTable(){
             colWidths: [5, 40, 40, 15, 15]
         });
 
+        for(var i = 0; i < res.length; i++){
+            viewItems.push([
+                res[i].id,
+                res[i].item_name,
+                res[i].department_name,
+                res[i].price,
+                res[i].stock_quantity
+            ]);
+        }
         
     })
 }
