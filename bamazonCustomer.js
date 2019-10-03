@@ -19,11 +19,13 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err){
     if(err) throw err;
+    
+    viewTable();
 })
 
 function viewTable(){
     
-    connection.query('SELECT FROM * products', function(err, res){
+    connection.query('SELECT * FROM products', function(err, res){
         if(err) throw err;
 
         var viewItems = new cliTable({
@@ -41,5 +43,46 @@ function viewTable(){
             ]);
         }
         console.log(viewItems.toString());
+        questions()
     })
+    
+}
+
+function questions(){
+
+    inquirer.prompt([
+        {
+            name: "id",
+            type: "input",
+            message: "What is the ID # of the Maple Item Would You Like To Buy?",
+            validate: function(val){
+                if(isNaN(val) === false){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+        },
+        {
+            name: "confirm",
+            type: "confirm",
+            message:"Are you Sure?"
+        }
+        
+    ]).then(function(answer){
+
+        if(answer.confirm === true){
+            questionTwo();
+        }
+        else{
+            console.log("Okay, Please Come Again! Happy Mapling!");
+        }
+
+    });
+   
+}
+
+function questionTwo(){
+    
 }
