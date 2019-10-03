@@ -48,6 +48,27 @@ function viewTable(){
     
 }
 
+function purchaseMore(){
+    inquirer.prompt([
+        {
+            name: "purchase",
+            type: "list",
+            message: "Would You Like To Make Another Purchase?",
+            choices: ['Yes Please', 'No Thank You']
+        }
+    ])
+    .then(function(action){
+        var purchase = action.purchase;
+        if(purchase === 'Yes Please'){
+            questions();
+        }
+        else{
+            console.log("\nI Completely Understand.\n")
+            console.log("Farewell And Have A Safe Travel, Fellow Mapler!\n")
+        }
+    })
+}
+
 function questions(){
 
     inquirer.prompt([
@@ -115,13 +136,15 @@ function questionTwo(){
                 connection.query('UPDATE products SET stock_quantity=? WHERE id=?',
                 [res[0].stock_quantity - answer.howMany, item_id], function(err){
                     if(err) throw err;
-                    buyItems();
+                    purchaseMore();
                 })
             }
             else{
                 console.log('\nInsufficient Quantity.\n')
-                console.log("There are only " + res[0].stock_quantity + " of the " + res[0].item_name + " available.\n")
+                console.log("There are  " + res[0].stock_quantity + " of the " + res[0].item_name + " available.\n")
+                purchaseMore();
             }
         })
+
     })
 }
