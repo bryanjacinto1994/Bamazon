@@ -51,23 +51,11 @@ function viewTable(){
 function questions(){
 
     inquirer.prompt([
-        {
-            name: "id",
-            type: "input",
-            message: "What is the ID # of the Maple Item Would You Like To Buy?",
-            validate: function(val){
-                if(isNaN(val) === false){
-                    return true;
-                }
-                else{
-                    return false;
-                }
-            }
-        },
+      
         {
             name: "confirm",
             type: "confirm",
-            message:"Are you Sure?"
+            message:"Would You Like To Make A Purchase?"
         }
         
     ]).then(function(answer){
@@ -86,6 +74,19 @@ function questions(){
 function questionTwo(){
     inquirer.prompt([
         {
+            name: "id",
+            type: "input",
+            message: "What is the ID # of the Maple Item Would You Like To Buy?",
+            validate: function(val){
+                if(isNaN(val) === false){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+        },
+        {
             name: "howMany",
             type: "input",
             message: "How many of this Maple Item Would You Like?",
@@ -99,4 +100,20 @@ function questionTwo(){
             }
         }
     ])
+    .then(function(answer){
+        var item_id = answer.id;
+        connection.query("SELECT * FROM products WHERE ?", [{id: item_id}], function(err, res){
+            
+            if(err) throw err;
+
+            if(res[0].stock_quantity - answer.howMany >= 0){
+
+                console.log("\nYou Are In Luck! We still have more of the " + res[0].item_name + " In Stock!\n");
+                console.log('There are ' + res[0].stock_quantity + " of the " + res[0].item_name + " available.\n");
+                console.log("You have purchased " + answer.howMany + " " +  res[0].item_name + "\n");
+
+                
+            }
+        })
+    })
 }
