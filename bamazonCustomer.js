@@ -40,6 +40,6 @@ function viewTable(){
                 res[i].stock_quantity
             ]);
         }
-        
+        console.log(viewItems.toString());
     })
 }
