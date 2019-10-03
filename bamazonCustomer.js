@@ -65,6 +65,7 @@ function purchaseMore(){
         else{
             console.log("\nI Completely Understand.\n")
             console.log("Farewell And Have A Safe Travel, Fellow Mapler!\n")
+            process.exit();
         }
     })
 }
