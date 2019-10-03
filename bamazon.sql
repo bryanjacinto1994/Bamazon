@@ -16,7 +16,7 @@ CREATE TABLE products(
 );
 
 INSERT INTO products(item_name, department_name, price, stock_quantity)
-Values ("Maple Staff", "Weapon", 35000, 50)
+Values ("Maple Staff", "Weapon", 35000, 50);
 
 INSERT INTO products (item_name, department_name, price, stock_quantity)
 VALUES("Maple Claw", "Weapon", 70000, 50);
