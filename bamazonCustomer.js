@@ -84,5 +84,19 @@ function questions(){
 }
 
 function questionTwo(){
-    
+    inquirer.prompt([
+        {
+            name: "howMany",
+            type: "input",
+            message: "How many of this Maple Item Would You Like?",
+            validate: function(val){
+                if(isNaN(val) === false){
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
+        }
+    ])
 }
