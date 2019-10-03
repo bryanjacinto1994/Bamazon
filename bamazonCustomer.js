@@ -17,7 +17,20 @@ var connection = mysql.createConnection({
 
 });
 
-connection.connect(function(error){
-    if(error) throw error;
+connection.connect(function(err){
+    if(err) throw err;
 })
 
+function viewTable(){
+    
+    connection.query('SELECT FROM * products', function(err, res){
+        if(err) throw err;
+
+        var viewItems = new cliTable({
+            head: ["ID", "Maple Items", "Description", "Mesos", "Stock"],
+            colWidths: [5, 40, 40, 15, 15]
+        });
+
+        
+    })
+}
