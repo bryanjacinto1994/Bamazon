@@ -112,7 +112,15 @@ function questionTwo(){
                 console.log('There are ' + res[0].stock_quantity + " of the " + res[0].item_name + " available.\n");
                 console.log("You have purchased " + answer.howMany + " " +  res[0].item_name + "\n");
 
-                
+                connection.query('UPDATE products SET stock_quantity=? WHERE id=?',
+                [res[0].stock_quantity - answer.howMany, item_id], function(err){
+                    if(err) throw err;
+                    buyItems();
+                })
+            }
+            else{
+                console.log('\nInsufficient Quantity.\n')
+                console.log("There are only " + res[0].stock_quantity + " of the " + res[0].item_name + " available.\n")
             }
         })
     })
