@@ -96,7 +96,9 @@ How to install the npm packages:
 bamazonCustomer.js : <br>
 * This will create a nice formatted table display on the Terminal/Git Bash.
 <br> 
+
 ```javascript
+
 //======================================== [Table] ========================================//
 function viewTable(){
     
