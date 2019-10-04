@@ -60,6 +60,7 @@ function purchaseMore(){
     .then(function(action){
         var purchase = action.purchase;
         if(purchase === 'Yes Please'){
+            viewTable();
             questions();
         }
         else{
@@ -87,6 +88,7 @@ function questions(){
         }
         else{
             console.log("Okay, Please Come Again! Happy Mapling!");
+            process.exit();
         }
 
     });
