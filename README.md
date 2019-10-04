@@ -140,7 +140,7 @@ bamazonCustomer.js :<br>
 
 ```javascript
 
-//======================================== [Question Prompt] ========================================//
+
 function questions(){
 
     //Gives the user a choice if they would like to make a purchase.
