@@ -6,12 +6,35 @@ Github: <br>
 https://github.com/bryanjacinto1994/Bamazon
 
 <hr>
+<br>
 
-![Site](./screenshots/one.png) <br>
+## Get Started :
+* Run Terminal/Git Bash.
+* Do an npm install on these following packages:<br>
+##### * Inquirer
+##### * MySQL
+##### * Cli-Table
 
-![Site](./screenshots/two.png) <br>
+#### (The Summary Section Will Explain How To Do A Proper Installation On These NPM Packages)
+* Go into the files where the javascript file is located. <br>
+Run on the Terminal / Gitbash<br>
+### node bamazonCustomer.js
+* Your screen should now look like the picture below:
+<br> The screen should ask the user if you would like to make a purchase.
+ 
+![Site](./screenshots/one.png) <br> <br> <hr>
 
-![Site](./screenshots/three.png) <br>
+* If you typed "yes", it should now look like the picture below:
+* It will now ask the user what ID number of the item they would like to purchase and the quantity of that specific item id.<br> 
+
+
+![Site](./screenshots/two.png) <br> <br> <hr>
+
+* After making a purchase, it will ask the user if they would like to make another purchase. If yes, the table appears again to choose from the following options.
+
+![Site](./screenshots/three.png) <br> <br> <hr>
+
+* If the user does not want to make another purchase, the screenshot below will give you the following message:
 
 ![Site](./screenshots/Four.png) <br>
 
@@ -40,6 +63,14 @@ https://github.com/bryanjacinto1994/Bamazon
 
 Using JavaScript and all the NPM packages listed above via Visual Studio Code, a mocked up version of "Amazon" was created through Node.js.
 
+The process of creating this program is to install the following npm packages in order for the program to completely work. 
+
+By making a connection to my sql using "mysql.createConnection", this will grab the mysql database from the '.sql' file located in your folder. 
+
+I have made a function that will view the information from MySQL database onto the node.js Terminal/ Git Bash and displays as a nice formatted table.
+
+Inquirer Prompt function was used to ask the user questions. Upon asking the questions, there are if/else statements depending on what the user chooses. If the user chooses to purchase, it will go to a new question prompt function. If not, it will give an 'else' statement, and a message will show up.
+
 For the NPM Packages (listed above), this was used to have access to use the "inquirer prompt" command to ask questions to the users. "MySQL" npm package is used to have access to the '.sql' files and also connected from the MySQL WorkBench. Lastly, the "Cli-Table" is used to have a nice format of the table in the Terminal/Git Bash <br><br>
 
 ```javascript
@@ -62,7 +93,8 @@ How to install the npm packages:
 
 ## Code Snippet
 
-bamazonCustomer.js : 
+bamazonCustomer.js : <br>
+* This will create a nice formatted table display on the Terminal/Git Bash.
 <br> 
 ```javascript
 connection.query('SELECT * FROM products', function(err, res){
@@ -88,7 +120,8 @@ connection.query('SELECT * FROM products', function(err, res){
     
 ```
 <br><hr><br>
-bamazonCustomer.js :
+bamazonCustomer.js :<br>
+* This function contains a prompt that asks the user the following questions. If the user chooses to purchase, it will go to a new function that asks the next question. If not, it will show the user a message.
 <br>
 ```javascript
 function questions(){
@@ -125,7 +158,10 @@ function questions(){
 }
 ```
 <br><hr><br>
-bamazonCustomer.js:
+bamazonCustomer.js:<br>
+
+* This function executes if the user wants to purchase an item. Then it will ask the following questions. Once the user purchases an item, the quantity of the item gets updated. If there are no more of the specific item on stock, it will give an else statement saying "Insfficient Quantity".<br>
+Once the user finish making a purchase, it will ask the user if they would like to make another purchase.
 
 ```javascript
 function questionTwo(){
@@ -190,7 +226,13 @@ function questionTwo(){
 }
 ```
 <br><hr><br>
-bamazonCustomer.js:
+bamazonCustomer.js:<br>
+
+This function will be called out after the user makes the first purchase. It will ask if they would like to make another purchase. If yes, the table function will execute again. If not, it will show the else statement with the following messages: <br> 
+
+
+### console.log("I Completely Understand.")
+### console.log("Farewell And Have A Safe Travel, Fellow Mapler!") 
 
 
 ```javascript
