@@ -7,6 +7,10 @@ https://github.com/bryanjacinto1994/Bamazon
 
 <hr>
 
+![Site] (./bamazon1.webm)
+
+<hr>
+
 ## Tools Used:
 
 * Visual Studio Code - Open source code editor for building and debugging web and cloud applications.
