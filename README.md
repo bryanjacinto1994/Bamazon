@@ -6,7 +6,7 @@ Github: <br>
 https://github.com/bryanjacinto1994/Bamazon
 
 <hr>
-<br>
+
 
 ## Tools Used:
 
