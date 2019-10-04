@@ -1,4 +1,4 @@
-# Bamazon (Maplestory)
+# Bamazon 
 
 ### Links: 
 
@@ -30,8 +30,8 @@ https://github.com/bryanjacinto1994/Bamazon
 
 Using JavaScript and all the NPM packages listed above via Visual Studio Code, a mocked up version of "Amazon" was created through Node.js.
 
-For the NPM Packages (listed above), this was used to have access to get request from servers API in order to get the results using "axios.get()" function. In order to have access for that, I installed the npm onto the Terminal/Git Bash using the input "npm install axios". <br>
-The installation for the other npm packages are the same way:<br>
+For the NPM Packages (listed above), this was used to have access to use the "inquirer prompt" command to ask questions to the users. "MySQL" npm package is used to have access to the '.sql' files and also connected from the MySQL WorkBench. Lastly, the "Cli-Table" is used to have a nice format of the table in the Terminal/Git Bash <br><br>
+How to install the npm packages:
 * #### Inquirer : <br><br>$ npm install inquirer
 * #### MySQL :<br><br> $ npm install mysql
 * #### Cli - Table : <br><br>$ npm install cli-table
