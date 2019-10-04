@@ -137,7 +137,9 @@ function viewTable(){
 bamazonCustomer.js :<br>
 * This function contains a prompt that asks the user the following questions. If the user chooses to purchase, it will go to a new function that asks the next question. If not, it will show the user a message.
 <br>
+
 ```javascript
+
 //======================================== [Question Prompt] ========================================//
 function questions(){
 
@@ -180,8 +182,10 @@ bamazonCustomer.js:<br>
 
 * This function executes if the user wants to purchase an item. Then it will ask the following questions. Once the user purchases an item, the quantity of the item gets updated. If there are no more of the specific item on stock, it will give an else statement saying "Insfficient Quantity".<br>
 Once the user finish making a purchase, it will ask the user if they would like to make another purchase.
+<br>
 
 ```javascript
+
 //======================================== [Next Question Prompt] ========================================//
 
 //This function will execute if the user wants to make a purchase: From "questions()"
@@ -269,6 +273,7 @@ function questionTwo(){
        
     })
 }
+
 ```
 <br><hr><br>
 bamazonCustomer.js:<br>
@@ -281,6 +286,7 @@ This function will be called out after the user makes the first purchase. It wil
 
 
 ```javascript
+
 //======================================== [Purchase Items Again] ========================================//
 function purchaseMore(){
     
@@ -312,6 +318,7 @@ function purchaseMore(){
         }
     })
 }
+
 ```
 
 
