@@ -8,6 +8,25 @@ https://github.com/bryanjacinto1994/Bamazon
 <hr>
 <br>
 
+## Tools Used:
+
+* Visual Studio Code - Open source code editor for building and debugging web and cloud applications.
+* JavaScript - A scripting language that uses curly-bracket syntax, first class functions and object-oriented.
+* jQuery - A JavaScript library that simplifys to manipulate HTML DOM.
+* Git - Version control system to track changes to source code.
+* Github - Hosts respository that can be deployed to GitHub pages.
+* NodeJS - A JavaScript runtime built on Chrome's V8 JavaScript engine
+<br>
+
+### NPM Packages Used:
+
+* Inquirer
+* MySQL
+* Cli-Table
+
+
+<hr>
+
 ## Get Started :
 * Run Terminal/Git Bash.
 * Do an npm install on these following packages:<br>
@@ -40,24 +59,6 @@ Run on the Terminal / Gitbash<br>
 
 <hr>
 
-## Tools Used:
-
-* Visual Studio Code - Open source code editor for building and debugging web and cloud applications.
-* JavaScript - A scripting language that uses curly-bracket syntax, first class functions and object-oriented.
-* jQuery - A JavaScript library that simplifys to manipulate HTML DOM.
-* Git - Version control system to track changes to source code.
-* Github - Hosts respository that can be deployed to GitHub pages.
-* NodeJS - A JavaScript runtime built on Chrome's V8 JavaScript engine
-<br>
-
-### NPM Packages Used:
-
-* Inquirer
-* MySQL
-* Cli-Table
-
-
-<hr>
 
 ## Summary
 
